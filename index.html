@@ -30,31 +30,53 @@
     main {
         background: #0a0a7d;
         padding: 30px;
-        position: relative;
-    }
-    section{
-        width: 70%;
     }
     aside{
-        width: 30%;
-        position:absolute;
-        right: 0;
-        top: 30px;
         background: #1313a1;
         padding:30px;
+        transition: all 2s;
     }
     article{
         background: #1d1dbe;
         padding:30px;
         margin-bottom: 15px;
+        transition: all 2s;
     }
     footer{
         background: #00002b;
         padding: 30px;
         height: 100px;
-        position: fixed;
-        bottom: 0;
         width: 100%;
+        clear: both;
+    }
+    /* Versión tablet */
+    @media screen and (min-width: 600px) {
+        section{
+            width: 70%;
+            float: left;
+        }
+        aside{
+            width: 30%;
+            float: right;
+        }
+    }
+    /* Versión laptop */
+    @media screen and (min-width: 1024px) {
+        article{
+            background: #5843f4;
+        }
+        aside{
+            background: #6138f8;
+        }
+    }
+    /* Versión Desktop */
+    @media screen and (min-width: 1440px) {
+        article{
+            background: #aa43f4;
+        }
+        aside{
+            background: #c238f8;
+        }
     }
   </style>
 </head>
