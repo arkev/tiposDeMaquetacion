@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog de Kevin</title>
+  <link rel="stylesheet" href="flexboxgrid.min.css">
   <style>
     /* Aqui va el código CSS */
     *{
@@ -47,37 +48,22 @@
         background: #00002b;
         padding: 30px;
         height: 100px;
-        width: 100%;
     }
     /* Versión tablet */
-    @media (min-width: 600px) {
-      main{
-        display: flex;
-      }
+    @media (min-width: 768px) {
         section{
-            flex: 1;
             article:nth-child(3){
               margin-bottom: 0;
             }
         }
-        aside{
-            width: 200px;
-            margin-left: 15px;
-        }
     }
     /* Versión laptop */
     @media (min-width: 1024px) {
-      main{
-        flex-direction: row-reverse;
-      }
         article{
             background: #5843f4;
         }
         aside{
             background: #6138f8;
-            width: 300px;
-            margin-left:0;
-            margin-right: 15px;
         }
     }
     /* Versión Desktop */
@@ -87,7 +73,6 @@
         }
         aside{
             background: #c238f8;
-            width: 400px;
         }
     }
   </style>
@@ -108,9 +93,9 @@
     </ul>
   </nav>
 
-  <main>
+  <main class="row">
   <!-- Sección para un artículo o post destacado -->
-  <section>
+  <section class="col-xs-12 col-sm-9 col-md-8 col-lg-7 last-md">
     <article>
       <h2>Post Destacado</h2>
       <p>
@@ -137,7 +122,7 @@
   </section>
 
   <!-- Barra lateral (sidebar) para widgets, enlaces, etc. -->
-  <aside>
+  <aside class="col-xs-12 col-sm-3 col-md-4 col-lg-5">
     <h3>Acerca de mí</h3>
     <p>
       Un breve texto sobre ti o el blog, tus redes sociales, o algo que quieras destacar.
