@@ -52,42 +52,41 @@
     /* Versión tablet */
     @media (min-width: 600px) {
       main{
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-rows: 1fr;
       }
         section{
-            flex: 1;
             article:nth-child(3){
               margin-bottom: 0;
             }
         }
         aside{
-            width: 200px;
             margin-left: 15px;
         }
     }
     /* Versión laptop */
     @media (min-width: 1024px) {
-      main{
-        flex-direction: row-reverse;
-      }
+        main{
+          grid-template-columns: 1fr 300px;
+        }
         article{
             background: #5843f4;
         }
         aside{
             background: #6138f8;
-            width: 300px;
-            margin-left:0;
-            margin-right: 15px;
         }
     }
     /* Versión Desktop */
     @media (min-width: 1440px) {
+      main{
+          grid-template-columns: 1fr 400px;
+        }
         article{
             background: #aa43f4;
         }
         aside{
             background: #c238f8;
-            width: 400px;
         }
     }
   </style>
